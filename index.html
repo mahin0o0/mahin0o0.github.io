@@ -3,102 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mahin Rahman</title>
+  <title>Mahin Rahman Digital Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
-      font-family: sans-serif;
-      text-align: center;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      margin: 0;
       padding: 20px;
-      background: #f0f0f0;
     }
     .card {
-      background: white;
       max-width: 400px;
       margin: auto;
+      background: #fff;
       border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
       padding: 20px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .logo {
-      width: 100px;
-      height: auto;
-      margin-bottom: 10px;
-    }
-    h1 {
-      margin: 0;
-    }
-    p {
-      margin: 5px 0;
-    }
-    .social-icons {
-      margin-top: 15px;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    .social-icons img {
-      width: 30px;
-      height: 30px;
-    }
-    .lang-toggle {
-      margin-top: 20px;
-    }
-    button {
-      padding: 5px 15px;
-      margin: 5px;
+    .toggle-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
       cursor: pointer;
+      border-radius: 5px;
+    }
+    .info {
+      margin-top: 20px;
+      line-height: 1.8;
+    }
+    .social-links i {
+      font-size: 24px;
+      margin: 10px;
+      color: #333;
+    }
+    .social-links a:hover i {
+      color: #007bff;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <img src="https://i.ibb.co/vBbxRQk/mahin-logo.png" alt="Logo" class="logo" />
-    <h1 id="name">Mahin Rahman</h1>
-    <p id="identity">Student, Computer Science & Technology</p>
-    <p id="institute">Headway Engineering Institute, Sylhet</p>
-    <p id="phone">Phone: 01700000000</p>
-    <p id="email">Email: example@email.com</p>
-
-    <div class="social-icons">
-      <a href="https://facebook.com/yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
-      <a href="https://instagram.com/yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
-      <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" /></a>
-      <a href="https://threads.net/@yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/10670/10670269.png" alt="Threads" /></a>
-      <a href="https://youtube.com/@yourchannel" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
+    <h2 id="name">Mahin Rahman</h2>
+    <div class="info" id="info">
+      <p><strong>Date of Birth:</strong> 15 Dec 2005</p>
+      <p><strong>Address:</strong> Uttargram-111, Dhanpur, Dakshin Gopal (Part), Sylhet</p>
+      <p><strong>Blood Group:</strong> O+</p>
+      <p><strong>Institute:</strong> Headway Engineering Institute</p>
+      <p><strong>Department:</strong> Computer</p>
+      <p><strong>Session:</strong> 2024–25</p>
+      <p><strong>Valid Till:</strong> 2029</p>
     </div>
-
-    <div class="lang-toggle">
-      <button onclick="setLang('en')">English</button>
-      <button onclick="setLang('bn')">বাংলা</button>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+      <a href="#"><i class="fab fa-threads"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
+    <button class="toggle-btn" onclick="toggleLanguage()">বাংলা</button>
   </div>
 
   <script>
-    const texts = {
-      en: {
-        name: "Mahin Rahman",
-        identity: "Student, Computer Science & Technology",
-        institute: "Headway Engineering Institute, Sylhet",
-        phone: "Phone: 01700000000",
-        email: "Email: example@email.com",
-      },
-      bn: {
-        name: "মাহিন রহমান",
-        identity: "ছাত্র, কম্পিউটার বিজ্ঞান ও প্রযুক্তি",
-        institute: "হেডওয়ে ইঞ্জিনিয়ারিং ইনস্টিটিউট, সিলেট",
-        phone: "ফোন: ০১৭০০০০০০০০",
-        email: "ইমেইল: example@email.com",
-      },
-    };
+    const info = document.getElementById("info");
+    const btn = document.querySelector(".toggle-btn");
+    let isEnglish = true;
 
-    function setLang(lang) {
-      document.getElementById("name").innerText = texts[lang].name;
-      document.getElementById("identity").innerText = texts[lang].identity;
-      document.getElementById("institute").innerText = texts[lang].institute;
-      document.getElementById("phone").innerText = texts[lang].phone;
-      document.getElementById("email").innerText = texts[lang].email;
+    function toggleLanguage() {
+      if (isEnglish) {
+        info.innerHTML = `
+          <p><strong>জন্ম তারিখ:</strong> ১৫ ডিসেম্বর ২০০৫</p>
+          <p><strong>ঠিকানা:</strong> উত্তরগ্রাম-১১১, ধানপুর, দক্ষিণ গোপাল (পার্ট), সিলেট</p>
+          <p><strong>রক্তের গ্রুপ:</strong> O+</p>
+          <p><strong>প্রতিষ্ঠান:</strong> হেডওয়ে ইঞ্জিনিয়ারিং ইনস্টিটিউট</p>
+          <p><strong>বিভাগ:</strong> কম্পিউটার</p>
+          <p><strong>শিক্ষাবর্ষ:</strong> ২০২৪–২৫</p>
+          <p><strong>মেয়াদ:</strong> ২০২৯</p>
+        `;
+        btn.textContent = "English";
+      } else {
+        info.innerHTML = `
+          <p><strong>Date of Birth:</strong> 15 Dec 2005</p>
+          <p><strong>Address:</strong> Uttargram-111, Dhanpur, Dakshin Gopal (Part), Sylhet</p>
+          <p><strong>Blood Group:</strong> O+</p>
+          <p><strong>Institute:</strong> Headway Engineering Institute</p>
+          <p><strong>Department:</strong> Computer</p>
+          <p><strong>Session:</strong> 2024–25</p>
+          <p><strong>Valid Till:</strong> 2029</p>
+        `;
+        btn.textContent = "বাংলা";
+      }
+      isEnglish = !isEnglish;
     }
   </script>
 </body>
 </html>
+
