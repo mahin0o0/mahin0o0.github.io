@@ -6,71 +6,98 @@
   <title>Mahin Rahman</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       text-align: center;
-      background: #f4f4f4;
+      padding: 20px;
+      background: #f0f0f0;
     }
-    .container {
+    .card {
       background: white;
       max-width: 400px;
-      margin: 20px auto;
-      padding: 20px;
+      margin: auto;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     .logo {
       width: 100px;
+      height: auto;
       margin-bottom: 10px;
     }
-    .lang-switch {
-      margin-bottom: 15px;
+    h1 {
+      margin: 0;
     }
-    .social-links img {
-      width: 32px;
-      margin: 10px;
+    p {
+      margin: 5px 0;
+    }
+    .social-icons {
+      margin-top: 15px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+    }
+    .lang-toggle {
+      margin-top: 20px;
+    }
+    button {
+      padding: 5px 15px;
+      margin: 5px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="logo" src="https://your-logo-link.com/logo.png" alt="Mahin Logo" />
-    
-    <div class="lang-switch">
-      <button onclick="setLang('en')">English</button>
-      <button onclick="setLang('bn')">বাংলা</button>
+  <div class="card">
+    <img src="https://i.ibb.co/vBbxRQk/mahin-logo.png" alt="Logo" class="logo" />
+    <h1 id="name">Mahin Rahman</h1>
+    <p id="identity">Student, Computer Science & Technology</p>
+    <p id="institute">Headway Engineering Institute, Sylhet</p>
+    <p id="phone">Phone: 01700000000</p>
+    <p id="email">Email: example@email.com</p>
+
+    <div class="social-icons">
+      <a href="https://facebook.com/yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+      <a href="https://instagram.com/yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+      <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" /></a>
+      <a href="https://threads.net/@yourprofile" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/10670/10670269.png" alt="Threads" /></a>
+      <a href="https://youtube.com/@yourchannel" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
     </div>
 
-    <h2 id="name">Mahin Rahman</h2>
-    <p id="student">Student, Computer Science and Technology</p>
-    <p id="contact">Phone: 017xxxxxxxx | Email: your@email.com</p>
-
-    <div class="social-links">
-      <a href="https://facebook.com/yourusername" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
-      <a href="https://instagram.com/yourusername" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
-      <a href="https://tiktok.com/@yourusername" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" /></a>
-      <a href="https://threads.net/@yourusername" target="_blank"><img src="https://seeklogo.com/images/T/threads-logo-5E5F261C7F-seeklogo.com.png" alt="Threads" /></a>
-      <a href="https://youtube.com/@yourusername" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
+    <div class="lang-toggle">
+      <button onclick="setLang('en')">English</button>
+      <button onclick="setLang('bn')">বাংলা</button>
     </div>
   </div>
 
   <script>
-    const content = {
+    const texts = {
       en: {
         name: "Mahin Rahman",
-        student: "Student, Computer Science and Technology",
-        contact: "Phone: 017xxxxxxxx | Email: your@email.com"
+        identity: "Student, Computer Science & Technology",
+        institute: "Headway Engineering Institute, Sylhet",
+        phone: "Phone: 01700000000",
+        email: "Email: example@email.com",
       },
       bn: {
         name: "মাহিন রহমান",
-        student: "ছাত্র, কম্পিউটার সায়েন্স অ্যান্ড টেকনোলজি",
-        contact: "ফোন: ০১৭xxxxxxxx | ইমেইল: your@email.com"
-      }
+        identity: "ছাত্র, কম্পিউটার বিজ্ঞান ও প্রযুক্তি",
+        institute: "হেডওয়ে ইঞ্জিনিয়ারিং ইনস্টিটিউট, সিলেট",
+        phone: "ফোন: ০১৭০০০০০০০০",
+        email: "ইমেইল: example@email.com",
+      },
     };
 
     function setLang(lang) {
-      document.getElementById('name').textContent = content[lang].name;
-      document.getElementById('student').textContent = content[lang].student;
-      document.getElementById('contact').textContent = content[lang].contact;
+      document.getElementById("name").innerText = texts[lang].name;
+      document.getElementById("identity").innerText = texts[lang].identity;
+      document.getElementById("institute").innerText = texts[lang].institute;
+      document.getElementById("phone").innerText = texts[lang].phone;
+      document.getElementById("email").innerText = texts[lang].email;
     }
   </script>
 </body>
