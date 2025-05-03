@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahin Rahman</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f4f4f4;
+    }
+    .container {
+      background: white;
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .logo {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+    .lang-switch {
+      margin-bottom: 15px;
+    }
+    .social-links img {
+      width: 32px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="https://your-logo-link.com/logo.png" alt="Mahin Logo" />
+    
+    <div class="lang-switch">
+      <button onclick="setLang('en')">English</button>
+      <button onclick="setLang('bn')">বাংলা</button>
+    </div>
+
+    <h2 id="name">Mahin Rahman</h2>
+    <p id="student">Student, Computer Science and Technology</p>
+    <p id="contact">Phone: 017xxxxxxxx | Email: your@email.com</p>
+
+    <div class="social-links">
+      <a href="https://facebook.com/yourusername" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" /></a>
+      <a href="https://instagram.com/yourusername" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" /></a>
+      <a href="https://tiktok.com/@yourusername" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok" /></a>
+      <a href="https://threads.net/@yourusername" target="_blank"><img src="https://seeklogo.com/images/T/threads-logo-5E5F261C7F-seeklogo.com.png" alt="Threads" /></a>
+      <a href="https://youtube.com/@yourusername" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" /></a>
+    </div>
+  </div>
+
+  <script>
+    const content = {
+      en: {
+        name: "Mahin Rahman",
+        student: "Student, Computer Science and Technology",
+        contact: "Phone: 017xxxxxxxx | Email: your@email.com"
+      },
+      bn: {
+        name: "মাহিন রহমান",
+        student: "ছাত্র, কম্পিউটার সায়েন্স অ্যান্ড টেকনোলজি",
+        contact: "ফোন: ০১৭xxxxxxxx | ইমেইল: your@email.com"
+      }
+    };
+
+    function setLang(lang) {
+      document.getElementById('name').textContent = content[lang].name;
+      document.getElementById('student').textContent = content[lang].student;
+      document.getElementById('contact').textContent = content[lang].contact;
+    }
+  </script>
+</body>
+</html>
