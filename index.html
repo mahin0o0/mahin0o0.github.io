@@ -3,148 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mahin Rahman - mahin0o0</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <title>Information Website</title>
   <style>
     body {
-      background: linear-gradient(to right, #e0eafc, #cfdef3);
-      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right bottom, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
     }
-    #cover {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+    header {
       text-align: center;
-      background: url('cover.jpeg') no-repeat center center/cover;
+      padding: 3rem 1rem 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
-    #cover h1 {
-      background-color: rgba(255,255,255,0.8);
-      padding: 20px;
-      border-radius: 15px;
-      cursor: pointer;
+    h1 {
+      text-align: center;
       font-size: 3rem;
+      margin-bottom: 2rem;
     }
-    .info-section {
-      display: none;
-      padding: 50px;
+    section {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      margin-bottom: 2rem;
+    }
+    .info {
+      margin-bottom: 1rem;
+    }
+    .info strong {
+      display: inline-block;
+      width: 140px;
+    }
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .social-icons a {
+      text-decoration: none;
+      color: white;
       text-align: center;
     }
-    .admin-login, .customizer-panel {
-      max-width: 500px;
-      margin: 50px auto;
-      padding: 30px;
-      background-color: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      filter: drop-shadow(0 0 5px white);
     }
-    input[type="file"] {
-      margin-bottom: 10px;
+    .label {
+      font-size: 0.8rem;
+      margin-top: 0.3rem;
     }
   </style>
 </head>
 <body>
-  <section id="cover">
-    <img src="photo.jpeg" alt="Mahin Rahman Photo" class="rounded-circle mb-3" width="150" height="150" />
-    <h1 id="name-touch">Mahin Rahman</h1>
+  <header>Information Website</header>
+  <h1>Mahin Rahman</h1>
+
+  <section>
+    <div class="info"><strong>Status:</strong> Student, Computer Science and Technology</div>
+    <div class="info"><strong>Phone:</strong> 01770756964</div>
+    <div class="info"><strong>Email:</strong> <a href="mailto:mahinrahman13140@gmail.com">mahinrahman13140@gmail.com</a></div>
+    <div class="info"><strong>WhatsApp:</strong> <a href="https://wa.me/8801770756964">Click to Message</a></div>
   </section>
 
-  <section id="bio" class="info-section">
-    <h2>Bio</h2>
-    <p>Name: Mahin Rahman</p>
-    <p>Username: mahin0o0</p>
-    <p>Father: [Add Later]</p>
-    <p>Mother: [Add Later]</p>
-    <p>Location: Sylhet, Bangladesh</p>
-    <button onclick="goToNext('education')" class="btn btn-primary">Next Information for Education Life</button>
-  </section>
-
-  <section id="education" class="info-section">
-    <h2>Education Life</h2>
-    <p>Institute: Headway Engineering Institute</p>
-    <p>Student ID: 248531</p>
-    <p>Department: Computer</p>
-    <p>Session: 2024-25</p>
-    <p>Validity: 2029</p>
-    <button onclick="goToNext('work')" class="btn btn-primary">Next Information for Work Life</button>
-  </section>
-
-  <section id="work" class="info-section">
-    <h2>Work Life</h2>
-    <p>(To be added later)</p>
-    <button onclick="goToNext('social')" class="btn btn-primary">Next Information for Social Media</button>
-  </section>
-
-  <section id="social" class="info-section">
+  <section>
     <h2>Social Media</h2>
-    <div class="d-flex flex-column align-items-center gap-2">
-      <a href="https://www.facebook.com/share/167HMiKwGM/" class="btn btn-outline-dark" target="_blank">Facebook</a>
-      <a href="https://www.instagram.com/mahin0o0/profilecard/?igsh=MWI0ZXk1ejJjaTM2bw==" class="btn btn-outline-danger" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@mahin0o0?_t=ZS-8w4GhTuUH4c&_r=1" class="btn btn-outline-dark" target="_blank">TikTok</a>
-      <a href="https://www.threads.net/@mahin0o0" class="btn btn-outline-dark" target="_blank">Threads</a>
-      <a href="https://www.youtube.com/@Mahin.0o0" class="btn btn-outline-danger" target="_blank">YouTube</a>
-      <a href="tel:01770756964" class="btn btn-outline-success">WhatsApp</a>
-      <a href="mailto:mahinrahman13140@gmail.com" class="btn btn-outline-info">Email</a>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/167HMiKwGM/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
+        <div class="label">Profile</div>
+      </a>
+      <a href="#"> <!-- Replace with your Facebook page URL -->
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook Page" />
+        <div class="label">Page</div>
+      </a>
+      <a href="https://www.instagram.com/mahin0o0/profilecard/?igsh=MWI0ZXk1ejJjaTM2bw==" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      </a>
+      <a href="https://www.tiktok.com/@mahin0o0?_t=ZS-8w4GhTuUH4c&_r=1" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" />
+      </a>
+      <a href="https://www.threads.net/@mahin0o0" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Threads_%28app%29_logo.svg" alt="Threads" />
+      </a>
+      <a href="https://www.youtube.com/@Mahin.0o0" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" />
+      </a>
     </div>
-    <button onclick="goToNext('motivation')" class="btn btn-primary mt-4">Next Information for You</button>
   </section>
 
-  <section id="motivation" class="info-section">
+  <section>
+    <h2>Education Life</h2>
+    <p>Student at Headway Engineering Institute, Sylhet<br />Department: Computer Science and Technology</p>
+  </section>
+
+  <section>
+    <h2>Work Life</h2>
+    <p>Currently learning and developing projects. Work information will be added later.</p>
+  </section>
+
+  <section>
     <h2>Motivational Message</h2>
-    <p>Success doesn’t come from what you do occasionally. It comes from what you do consistently.</p>
-    <p>Believe in yourself. Work hard. Be kind. Stay focused.</p>
-    <h4 class="mt-4">Thank You</h4>
-    <button onclick="goToNext('locker')" class="btn btn-secondary mt-3">Go to My Locker</button>
+    <p>"Believe in yourself. Push your limits. Never stop growing."</p>
   </section>
-
-  <section id="locker" class="info-section">
-    <div class="admin-login">
-      <h3>My Locker (Admin Panel)</h3>
-      <input type="password" id="lockerPassword" placeholder="Enter Password" class="form-control mb-3" />
-      <button onclick="checkLockerAccess()" class="btn btn-success w-100">Unlock</button>
-      <p class="mt-3"><a href="#" onclick="alert('Password reset instructions will be sent to: mahinrahman13140@gmail.com and 01770756964')">Forgot Password?</a></p>
-      <div id="lockerAccess" style="display:none;">
-        <div class="customizer-panel">
-          <h4>Customize Your Website</h4>
-          <label>Profile Picture:</label>
-          <input type="file" class="form-control" />
-          <label>Cover Photo:</label>
-          <input type="file" class="form-control" />
-          <label>Background Theme:</label>
-          <input type="color" class="form-control" />
-          <label>Add New Bio Details:</label>
-          <textarea class="form-control" rows="3"></textarea>
-          <label>Add New Page:</label>
-          <input type="text" placeholder="Page Name" class="form-control" />
-          <button class="btn btn-info w-100 mt-2">Add Page</button>
-          <label class="mt-3">Upload Public Video:</label>
-          <input type="file" class="form-control" />
-          <label>Upload Personal Video:</label>
-          <input type="file" class="form-control" />
-          <button class="btn btn-outline-danger mt-3">Change Password</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    function goToNext(sectionId) {
-      document.querySelectorAll('.info-section').forEach(s => s.style.display = 'none');
-      document.getElementById(sectionId).style.display = 'block';
-    }
-
-    document.getElementById('name-touch').addEventListener('click', () => goToNext('bio'));
-    document.querySelectorAll('.info-section').forEach(s => s.style.display = 'none');
-
-    function checkLockerAccess() {
-      const pass = document.getElementById('lockerPassword').value;
-      if (pass === '24578mahin1318914rahman') {
-        document.getElementById('lockerAccess').style.display = 'block';
-      } else {
-        alert('Incorrect password!');
-      }
-    }
-  </script>
 </body>
 </html>
