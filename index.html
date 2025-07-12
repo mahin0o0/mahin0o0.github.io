@@ -1,108 +1,97 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mahin Rahman - Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mahin Rahman — Personal Info</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    :root { --primary: #1864ab; --secondary: #e9ecef; --text: #212529; --bg: #f8fafc; --shadow: 0 6px 24px rgba(24,100,171,0.07); --radius: 18px;}
-    * { box-sizing: border-box; margin:0; padding:0;}
-    body { background: var(--bg); color: var(--text); font-family: 'Inter', Arial, sans-serif;}
-    .container { max-width: 860px; margin: 40px auto 0; padding: 24px; border-radius: var(--radius); background: #fff; box-shadow: var(--shadow);}
-    header { border-radius: var(--radius); text-align:center; margin-bottom: 32px;}
-    .name { font-size: 2.7rem; font-weight: 700; color: var(--primary); letter-spacing: -2px;}
-    .bio { margin: 20px auto 0; max-width:600px; color:#444; font-size:1.10rem;}
-    .section-title { margin-top:36px; color: var(--primary); font-size:1.17rem; text-transform: uppercase; font-weight:600; letter-spacing:1.5px;}
-    .card-row { display: flex; flex-wrap: wrap; gap:30px; justify-content:space-between; margin:24px 0;}
-    .card { flex:1 1 280px; min-width:260px; background: var(--secondary); border-radius: var(--radius); box-shadow: 0 2px 12px rgba(24,100,171,0.07); padding:24px 22px;}
-    .card-title { color: #14395b; font-weight: 600; font-size: 1.17rem; margin-bottom: 20px; }
-    .info-list { list-style: none; margin: 0; padding: 0;}
-    .info-list li { margin-bottom: 14px; font-size:1.03rem;}
-    .socials { display: flex; gap: 20px; justify-content: center; margin: 30px 0 0;}
-    .socials a { background: #fff; display:flex; align-items:center; justify-content:center; border-radius: 50%; width:48px; height:48px; box-shadow: 0 1px 5px 0 #b9d8fc44; transition:.15s; border:1.5px solid #efefef;}
-    .socials a:hover { border-color: var(--primary); box-shadow: 0 6px 20px 0 #95c4f9aa;}
-    .socials svg { width: 22px; height: 22px;}
-    .contact-row { margin:40px 0 0; display:flex; flex-wrap:wrap; gap:30px; justify-content:center;}
-    .contact-card { background: var(--secondary); border-radius: var(--radius); box-shadow: 0 1px 8px rgba(24,100,171,0.04); padding: 20px 28px; display:flex; flex-direction:column; min-width:214px;}
-    .contact-card span { color: var(--primary); font-size: 1rem; font-weight:600;}
-    .contact-card a { color: #14395b; letter-spacing: 0.3px; margin-top:2px; }
-    @media (max-width: 650px) {
-      .card-row{flex-direction:column;gap:18px;}
-      .container{padding:10px;}
-      .contact-row{flex-direction:column;gap:12px;}
-      .socials a{width:38px;height:38px;}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 30px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transition: all 0.4s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+    }
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 15px;
+    }
+    h1 {
+      font-size: 26px;
+      margin: 10px 0 5px;
+    }
+    p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    .social-icons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #00ffe1;
+    }
+    .btn {
+      margin-top: 25px;
+      padding: 10px 25px;
+      background-color: #00ffe1;
+      color: black;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="name">Mahin Rahman</div>
-      <div class="bio">Aspiring technology enthusiast and devoted teacher, currently pursuing Computer Science and Technology at Headway Engineering Institute. Driven to create impact through both education and innovation—combining technical curiosity with a passion for inspiring others.</div>
-    </header>
-    <div class="card-row">
-      <div class="card">
-        <div class="card-title">🎓 Student Information</div>
-        <ul class="info-list">
-          <li><b>Institute:</b> <a href="http://www.headway.edu.bd" target="_blank">Headway Engineering Institute</a></li>
-          <li><b>Department:</b> Computer Science and Technology</li>
-          <li><b>Student ID:</b> 257156</li>
-          <li><b>Validity:</b> 2029</li>
-          <li><b>Location:</b> galleria complex (7th floor), zindabazar, Sylhet</li>
-          <li><b>Phone:</b> +88 01318-221526-7</li>
-          <li><b>Institute FB:</b> <a href="https://www.facebook.com/headway.ei" target="_blank">Visit Page</a></li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="card-title">🏢 Work Information</div>
-        <ul class="info-list">
-          <li><b>Profession:</b> Teacher</li>
-          <li><b>Institute:</b> Sylhet Art and Culture Institute</li>
-          <li><b>Location:</b> Mahmud Complex 3rd floor, Madina Madina, Sylhet</li>
-          <li><b>Institute FB:</b> <a href="https://www.facebook.com/profile.php?id=100063620542119" target="_blank">Visit Page</a></li>
-        </ul>
-      </div>
+  <div class="card">
+    <img src="https://avatars.githubusercontent.com/u/placeholder" alt="Mahin Rahman" />
+    <h1>Mahin Rahman</h1>
+    <p>Student, Headway Engineering Institute, Sylhet</p>
+    <p>📧 mahinrahman13140@gmail.com</p>
+    <p>📞 01770756964</p>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/167HMiKwGM/" target="_blank">📘</a>
+      <a href="https://www.instagram.com/mahin0o0/" target="_blank">📷</a>
+      <a href="https://www.tiktok.com/@mahin0o0" target="_blank">🎵</a>
+      <a href="https://www.threads.net/@mahin0o0" target="_blank">🧵</a>
+      <a href="https://www.youtube.com/@Mahin.0o0" target="_blank">▶️</a>
+      <a href="https://wa.me/8801770756964" target="_blank">💬</a>
     </div>
-    <div class="section-title">Connect with Me</div>
-    <div class="socials">
-      <a href="https://www.facebook.com/mahin.rahman.757258" target="_blank" aria-label="Facebook">
-        <svg fill="#0866ff" viewBox="0 0 24 24"><path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.4C0 23.4.6 24 1.3 24h11.5v-9.3H9.7v-3.6h3.1V8.4c0-3.1 1.9-4.8 4.7-4.8 1.3 0 2.4.1 2.7.1v3.1h-1.9c-1.5 0-1.8.8-1.8 1.8v2.3h3.6l-.5 3.6h-3V24h5.9c.7 0 1.3-.6 1.3-1.3V1.3c0-.7-.6-1.3-1.3-1.3z"/></svg>
-      </a>
-      <a href="https://www.facebook.com/share/1ZFyeuJF3G/" target="_blank" aria-label="Facebook Page">
-        <svg fill="#0866ff" viewBox="0 0 24 24"><path d="M22.7 0H1.3C.6 0 0 .6 0 1.3v21.4C0 23.4.6 24 1.3 24h11.5v-9.3H9.7v-3.6h3.1V8.4c0-3.1 1.9-4.8 4.7-4.8 1.3 0 2.4.1 2.7.1v3.1h-1.9c-1.5 0-1.8.8-1.8 1.8v2.3h3.6l-.5 3.6h-3V24h5.9c.7 0 1.3-.6 1.3-1.3V1.3c0-.7-.6-1.3-1.3-1.3z"/></svg>
-      </a>
-      <a href="https://www.instagram.com/mahin0o0?igsh=MWI0ZXk1ejJjaTM2bw==" target="_blank" aria-label="Instagram">
-        <svg fill="#E4405F" viewBox="0 0 24 24"><path d="M12 2.2c3.1 0 3.5 0 4.8.1 1.2.1 2.1.3 2.6.6.6.3 1 .7 1.4 1.4s.5 1.4.6 2.6c.1 1.3.1 1.7.1 4.8s0 3.5-.1 4.8c-.1 1.2-.3 2.1-.6 2.6-.3.6-.7 1-1.4 1.4s-1.4.5-2.6.6c-1.3.1-1.7.1-4.8.1s-3.5 0-4.8-.1c-1.2-.1-2.1-.3-2.6-.6-.6-.3-1-.7-1.4-1.4s-.5-1.4-.6-2.6C2.2 15.5 2.2 15.1 2.2 12s0-3.5.1-4.8c.1-1.2.3-2.1.6-2.6.3-.6.7-1 1.4-1.4C4.6 2.6 5.5 2.4 6.7 2.3 8 2.2 8.4 2.2 12 2.2zm0-2.2C8.4 0 8 0 6.7.1S4.5.3 3.9.6c-.5.3-1 .7-1.4 1.4s-.5 1.4-.6 2.6C1.2 4.5 1.2 4.9 1.2 12c0 7.1 0 7.5.1 8.8.1 1.2.3 2.1.6 2.6.3.6.7 1 1.4 1.4.5.3 1.4.5 2.6.6C8 23.8 8.4 23.8 12 23.8s3.5 0 4.8-.1 2.1-.3 2.6-.6c.6-.3 1-.7 1.4-1.4.3-.5.5-1.4.6-2.6.1-1.3.1-1.7.1-8.8 0-7.1 0-7.5-.1-8.8-.1-1.2-.3-2.1-.6-2.6-.3-.6-.7-1-1.4-1.4-.5-.3-1.4-.5-2.6-.6C15.5.2 15.1.2 12 .2zm0 5.4a6.4 6.4 0 1 0 0 12.8 6.4 6.4 0 0 0 0-12.8zm0 10.5a4.1 4.1 0 1 1 0-8.2 4.1 4.1 0 0 1 0 8.2zm7.2-11.9a1.5 1.5 0 0 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg>
-      </a>
-      <a href="https://tiktok.com/@mahin0o0" target="_blank" aria-label="TikTok">
-        <svg fill="#010101" viewBox="0 0 24 24"><path d="M20.993 8.207c-.416 0-.8-.036-1.17-.098v5.441c0 3.104-2.522 5.625-5.625 5.625-1.571 0-3-.654-4.023-1.677A5.623 5.623 0 0 1 6.32 14.06h3.372c-.11.328-.172.672-.172 1.04A2.625 2.625 0 0 0 12.44 17.722a2.626 2.626 0 0 0 2.625-2.625V5.835a10.918 10.918 0 0 0 4.147.872v-2.5a8.618 8.618 0 0 1-4.153-.872C13.793 1.66 12.441 0 12.441 0s-1.352 1.659-3.618 2.335A8.618 8.618 0 0 1 4.67 3.335v2.5a10.92 10.92 0 0 0 4.147-.872V14.06a5.622 5.622 0 0 1-1.625 4.106 5.625 5.625 0 0 1-4.024 1.678A2.626 2.626 0 0 1 .75 17.723a2.626 2.626 0 0 1 2.625-2.624A2.625 2.625 0 0 1 6.002 10.26v5.441c0 .368-.062.712-.171 1.04A2.626 2.626 0 0 1 2.75 17.723a2.626 2.626 0 0 1-2.625-2.624V6.753c0-5.044 4.101-9.146 9.145-9.146s9.145 4.102 9.145 9.146v5.43c0 .03-.004.06-.005.09z"/></svg>
-      </a>
-      <a href="https://www.youtube.com/@MahinRahman0o0" target="_blank" aria-label="YouTube">
-        <svg fill="#FF0000" viewBox="0 0 24 24"><path d="M23.498 6.186c-.275-1.03-1.085-1.84-2.115-2.115C19.218 3.5 12 3.5 12 3.5S4.782 3.5 2.617 4.07c-1.03.275-1.84 1.085-2.115 2.115C0 8.351 0 12 0 12s0 3.649.502 5.814c.275 1.03 1.085 1.84 2.115 2.115C4.782 20.5 12 20.5 12 20.5s7.218 0 9.383-.571c1.03-.275 1.84-1.085 2.115-2.115C24 15.649 24 12 24 12s0-3.649-.502-5.814zM9.545 15.568V8.432l6.545 3.568-6.545 3.568z"/></svg>
-      </a>
-      <a href="mailto:mahinrahman13140@gmail.com" target="_blank" aria-label="Email">
-        <svg fill="#EA4335" viewBox="0 0 24 24"><path d="M12 13.1 0 6.3V4.5L12 12.1l12-7.6v1.8l-12 6.8z"/><path d="M0 6.3v11.2c0 .7.5 1.3 1.2 1.3h21.6c.7 0 1.2-.6 1.2-1.3V6.3L12 13.1 0 6.3z"/></svg>
-      </a>
-      <a href="https://wa.me/8801770756964" target="_blank" aria-label="WhatsApp">
-        <svg fill="#25D366" viewBox="0 0 24 24"><path d="M20.52 3.48A11.78 11.78 0 0 0 12.04 0C5.4 0 .03 5.35.03 12c0 2.11.55 4.19 1.62 6.03L0 24l6.14-1.6a11.96 11.96 0 0 0 5.9 1.5h.05c6.64 0 12.01-5.36 12.01-12 0-3.21-1.25-6.23-3.56-8.52zm-8.48 20.02c-1.81 0-3.6-.48-5.17-1.38l-.36-.21-3.63.95.97-3.53-.23-.37a9.933 9.933 0 0 1-1.51-5.29C2.11 6.47 6.6 2 12.04 2c2.75 0 5.34 1.06 7.29 3.01 1.94 1.94 3 4.53 3 7.29.001 5.48-4.47 9.97-9.99 9.97zm5.48-7.31c-.3-.15-1.74-.86-2.01-.95-.27-.1-.47-.15-.68.15-.2.31-.78.95-.96 1.15-.18.2-.35.22-.65.07-.3-.15-1.29-.48-2.46-1.53-.91-.82-1.52-1.82-1.7-2.13-.18-.3-.02-.47.13-.62.14-.14.31-.37.46-.55a2.025 2.025 0 0 0 .33-.54c.1-.13.03-.32-.02-.47-.06-.15-.61-1.47-.84-2.04-.22-.53-.44-.45-.68-.46-.18-.01-.38-.01-.59-.01a1.11 1.11 0 0 0-.81.38c-.19.19-.34.51-.34.8 0 .63.42 1.25.47 1.33.13.2.85 1.34 2.08 2.22 1.22.87 2.11 1.15 2.3 1.21.23.07.44.06.61-.04.19-.1.59-.23.91-.4.25-.13.43-.2.62-.2.19 0 .48.07.77.21.392.196.928.453 1.02.478.3.1.56.16.8-.03.16-.13.5-.49.8-1.02.199-.35.2-.64.14-.77-.06-.16-.245-.26-.455-.37z"/></svg>
-      </a>
-    </div>
-    <div class="contact-row">
-      <div class="contact-card">
-        <span>Email:</span>
-        <a href="mailto:mahinrahman13140@gmail.com">mahinrahman13140@gmail.com</a>
-      </div>
-      <div class="contact-card">
-        <span>WhatsApp:</span>
-        <a href="https://wa.me/8801770756964" target="_blank">01770756964</a>
-      </div>
-    </div>
-    <footer style="text-align:center; color:#9eb1bf; margin-top:40px;font-size:.98rem;">© 2025 Mahin Rahman. All rights reserved.</footer>
+
+    <button class="btn" onclick="alert('More features coming soon!')">Next Information</button>
   </div>
 </body>
 </html>
-```
